@@ -6,24 +6,21 @@ let getTime = () => {
     return `${hours} : ${minutes} : ${seconds}`;
 };
 
-let numSec = prompt("Введите интервал времени в сукундах", 0);
-let stopTime = prompt("ВВедит срок работы таймера в секундах", 0);
+
+let numSec = prompt("Введите интервал времени в сукундах", 2) * 1000;
+let stopTime = prompt("ВВедит срок работы таймера в секундах", 0) * 1000;
 
 let timer = document.querySelector(".timer");
 let newTime = document.createElement("h1");
-newTime.textContent = getTime();
+
 timer.appendChild(newTime);
 
-const setTime = (timer, numSec) => {
-    setInterval(() => {
-        newTime.innerHTML = getTime();
-        timer.appendChild(newTime);
-    }, numSec);
-};
+let setTime = setInterval(() => {
+    newTime.innerHTML = getTime();
+    timer.appendChild(newTime);
+}, numSec);
 
-setTime();
-
-setTimeout(function(stopTime) {
+setTimeout(function() {
     clearInterval(setTime);
     alert("стоп");
 }, stopTime);

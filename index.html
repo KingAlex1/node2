@@ -6,10 +6,42 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     
+    
 </head>
 <body>
-       
+    <h1>33333333</h1>   
     <div class="timer"> </div>
-    <script src="./timer.js"></script>
+
+    <script>
+        let getTime = () => {
+    let date = new Date();
+    let hours = date.getHours();
+    let minutes = date.getMinutes();
+    let seconds = date.getSeconds();
+    return `${hours} : ${minutes} : ${seconds}`;
+};
+
+
+let numSec = prompt("Введите интервал времени в сукундах", 2) * 1000;
+let stopTime = prompt("ВВедит срок работы таймера в секундах", 0) * 1000;
+
+let timer = document.querySelector(".timer");
+let newTime = document.createElement("h1");
+
+timer.appendChild(newTime);
+
+let setTime = setInterval(() => {
+    newTime.innerHTML = getTime();
+    timer.appendChild(newTime);
+}, numSec);
+
+setTimeout(function() {
+    clearInterval(setTime);
+    alert("стоп");
+}, stopTime);    
+    
+    </script>
+    <!-- <script src="./timer.js"></script> -->
+    <!-- <script src="./main.js"></script> -->
 </body>   
 </html>
