@@ -1,0 +1,27 @@
+{
+  "name": "nodeHw2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "dependencies": {
+    "eslint": "^4.13.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "myenv": "set NUMSEC=1000 && set STOPTIME=7000 && node main.js"
+    
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingAlex1/node2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KingAlex1/node2/issues"
+  },
+  "homepage": "https://github.com/KingAlex1/node2#readme"
+}
